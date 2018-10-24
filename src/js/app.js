@@ -1,11 +1,19 @@
-var menu = new TimelineMax({paused:true, reversed:true})
-	
-	menu
-	.to("#burger1", .5, {rotation: 45, transformOrigin: "left 50%", ease:Power2.easeInOut}, "cross")
-	.to("#burger2", .5, {autoAlpha: 0}, "cross")
-	.to("#burger3", .5, {rotation: -45, transformOrigin: "left 50%", ease:Power2.easeInOut}, "cross")
-	.to("#main", 0.75, {x: "-300px", ease:Power2.easeInOut})
-	
-	function menuIn() {
-menu.reversed() ? menu.play() : menu.reverse();	
+//funcionalidad del Menú lateral
+function toggleMenu() {
+	if (sideMenu.className.indexOf("menu_closed") >= 0) { 
+	  openMenu(); 
+	} else {
+	  closeMenu(); 
 	}
+  }
+  
+  function openMenu() {
+	sideMenu.classList.remove('menu_closed'); 
+	sideMenu.classList.add('menu_open');
+  }
+  
+  function closeMenu() {
+	sideMenu.classList.add('menu_closed'); 
+	sideMenu.classList.remove('menu_open');
+  }
+  

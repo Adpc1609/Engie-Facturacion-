@@ -1,42 +1,107 @@
-/*---------------Diseño Navbar---------------------*/
-#main {
+/* Contenedor de la información */
+.info-container {
+  height: 300px;
+  background-color: aqua;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19), 0 10px 9px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* .container {
+  margin-right: 5%;
+  margin-left: 5%;
+} */
+
+.select-options {
+  border-left: solid;
+}
+
+.btn-section{
+  background-color: #f6a800;
+  height: 45px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19), 0 10px 9px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* .container-fluid {
+width: 95%;
+} */
+
+.graph {
+    min-width: 290px;
+    background-color: aqua;
+}
+
+.color {
+    background-color:rgb(243, 248, 249);
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.19), 0 10px 9px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.info-container {
+    min-height: 500px;
+    margin-top: 50px;
+}
+
+.description {
+    background-color: white;
+    margin: 20px;
+    max-width: 245px;
+}
+
+/* Menu lateral */
+
+.menu {
     position: absolute;
+    top:0;
+    height: 100vh; /* viewport height, usa el 100% de la altura de la pantalla*/
+    width: 90vw;  /* viewport width 90% del an*/
+    transition: 0.5s ease-out;
+    z-index: 2;
+}
+
+.a-nav{
+    color: #f6a800;
+}
+
+/* .navbar {
+    margin: 0px -45px 0px -15px;
+} */
+
+.menu_closed {
+    left: -90vw;
+   
+}
+
+.menu_open{
     left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    padding: 1em;
-    background-color: #F1F1F1;
-    box-sizing: border-box;
-  }
-  #menu {
+    z-index: 2;
+}
+
+.close_button{ /* configurando boton de cierre del navbar*/
+    font-size: xx-large;
+    color: #f6a800;
     position: absolute;
-    width: 300px;
-    background-color: #333;
-    padding: 1em;
-    box-sizing: border-box;
-    height: 100%;
-    right: 0;
-    top: 0;
-    z-index: 0;
-    text-align: left;
-    font-family: 'arial';
-    color: #F1F1F1;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  #nav {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2000;
-    height: 3em;
-    padding: 1em;
-    box-sizing: border-box;
-    cursor: pointer;
-  }
-  #nav:hover {
-    opacity: .6;
-  }
-  
+    right: 10px;  
+                    
+}
+
+.menu_content{
+    padding: 10px;
+    margin-top: 20px;
+   
+}
+
+.color-side{
+    background-color: white;
+}
+
+@media(min-width: 768px){ /* esta medida se encuentra en bootstrap-> overview-> responsive breakpoints */
+    .menu{
+        width: 20vw; /*El menú va a tomar este ancho con pantallas de 768px hacia arriba*/
+    }
+
+    .menu_closed{
+        left:-20vw;
+    }
+}
