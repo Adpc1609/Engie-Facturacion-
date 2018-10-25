@@ -1,8 +1,57 @@
 /* Contenedor de la información */
 body{
   font-family: 'Dosis', sans-serif;
-  background-image: linear-gradient(-90deg, rgb(0, 170, 255), white);
+}
+/*navbar nuevo*/
+/* Contenedor de la información */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
 
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Dosis', sans-serif;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 .info-container {
   height: 300px;
@@ -20,14 +69,7 @@ body{
   margin-left: 5%;
 } */
 
-.select-options {
-  border-left: solid;
-  padding-left: 10px;
-}
 
-.select-options:hover{
-  background-color: #f6a800;
-}
 
 .btn-section{
   height: 45px;
@@ -63,62 +105,13 @@ width: 95%;
     max-width: 245px;
 }
 
-/* Menu lateral */
 
-.menu {
-    position: absolute;
-    top:0;
-    height: 100vh; /* viewport height, usa el 100% de la altura de la pantalla*/
-    width: 90vw;  /* viewport width 90% del an*/
-    transition: 0.5s ease-out;
-    z-index: 2;
-}
-
-.a-nav{
-    color: #f6a800;
-}
 
 /* .navbar {
     margin: 0px -45px 0px -15px;
 } */
 
-.menu_closed {
-    left: -90vw;
-   
-}
 
-.menu_open{
-    left: 0;
-    z-index: 2;
-}
-
-.close_button{ /* configurando boton de cierre del navbar*/
-    font-size: xx-large;
-    color: #f6a800;
-    position: absolute;
-    right: 10px;  
-                    
-}
-
-.menu_content{
-    padding: 10px;
-    margin-top: 20px;
-   
-}
-
-.color-side{
-    background-color: white;
-}
-
-@media(min-width: 768px){ /* esta medida se encuentra en bootstrap-> overview-> responsive breakpoints */
-    .menu{
-        width: 20vw; /*El menú va a tomar este ancho con pantallas de 768px hacia arriba*/
-    }
-
-    .menu_closed{
-        left:-20vw;
-    }
-}
 /* css bienvenidos */
 
 .tec{
@@ -146,9 +139,34 @@ width: 95%;
 
 #bienvenido{
   margin-top: 1.5em;
-  color: white;
+
 }
 #interes{
   margin-top: 2em;
-  color: white;
+
 }
+
+.fa-bars{
+  font-size: 1.5em;
+  color:white;
+  margin-top: 1em;
+}
+nav{
+  background-color: black;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+
+}
+.mx{
+  margin-left: 5em;
+  margin-right:5em;
+
+}
+.mx:hover{
+  color:rgb(60,168,248);
+}
+A:link {text-decoration: none }
+A:hover { color: white;  }
+A:visited {color: white; text-decoration: none }
+
+/*
