@@ -5,23 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="src/css/style.css">
     <title>Engie</title>
 </head>
-
 <body>
     <div class="container">
         <div class="row">
-            <div class="col">
-                    <h3 class="display-5 text-center">!Bienvenido @Acero-Chile</h3>
-                    <h1 class="display-4 text-center">¿Cual es tu principal Interes?</h1>
-            </div>  
-        </div>
-        <div class="row">
-            <div class="col md-4">HOLA</div>
-            <div class="col md-4">HOLA</div>
-            <div class="col md-4">HOLA</div>
+            <div class="col-sm-4 col-md-12 col-lg-12" id="botones">
+                <h3 class="text-right font-weight-bold" id="bienvenido">¡Bienvenido Acero-Chile!</h3>
+                <h1 class="text-center font-weight-bold" id="interes">¿Cuál es tu principal interes?</h1>
+                <div id="iconos" class="d-flex justify-content-between">
+                    <div class="tec table-hover" style="display:none"></div>
+                    <div class="tec text-center">
+                        <img src="assets/img/bar-chart.svg" width="100" height="100">
+                        <p class="font-weight-bold mt-3">Historial Consumo</p>
+                    </div>
+                    <div class="tec text-center">
+                        <img src="assets/img/analytics.svg" width="100" height="100">
+                        <p class="font-weight-bold mt-3">Detalle de tus facturas</p>
+                    </div>
+                    <div class="tec text-center">
+                        <img src="assets/img/research.svg" width="100" height="100">
+                        <p class="font-weight-bold mt-3">Métricas y datos específicos</p>
+                    </div>
+                    <div class="tec text-center">
+                        <img src="assets/img/newspaper.svg" width="100" height="100">
+                        <p class="font-weight-bold mt-3">Eventos de Interés</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

@@ -1,4 +1,7 @@
 /* Contenedor de la información */
+body{
+  font-family: 'Dosis', sans-serif;
+}
 .info-container {
   height: 300px;
   background-color: aqua;
@@ -104,4 +107,36 @@ width: 95%;
     .menu_closed{
         left:-20vw;
     }
+}
+/* css bienvenidos */
+
+.tec{
+  padding: 0.5em;
+  display: inline-block;
+  justify-content: center;
+  margin-left: 1em;
+  transition: 0,5s;
+}
+.tec:hover{
+  transform: scale(1.3);
+}
+.tec > i{
+  color:black;
+  font-weight: bold; 
+  font-size: 4em;
+}
+
+#botones{
+  margin-top: 2em;
+}
+#iconos{
+  margin-top: 6em;
+}
+
+#bienvenido{
+  margin-top: 1.5em;
+}
+#interes{
+  margin-top: 2em;
+  color: rgb(0, 170, 255)
 }
