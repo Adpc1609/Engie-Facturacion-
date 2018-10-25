@@ -21,17 +21,22 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a href="bienvenida.html">
+                    <div class="principal-options text-left">Logo Engie</div>
+                </a>
+                <div class="principal-options text-left" onclick="historialConsumoNav()" id="historialConsumo">Historial de consumo</div>
+                <div class="principal-options text-left" onclick="metricaDatoNav()" id="metricaDato">Métrica y dato específico</div>
+                <div class="principal-options text-left" onclick="detalleFacturaNav()" id="detalleFactura">Detalles de factura</div>
             </nav>
 
             <nav id="sideMenu" class="nav flex-column float-left menu color-side menu_closed">
-
                 <div onclick="toggleMenu()" class="close_button">
                     <span aria-hidden="true">&times;</span>
                 </div>
                 <div class="menu_content">
-                    <a class="nav-link active a-nav" onclick="showGetResiduePage()">Factura</a>
-                    <a class="nav-link a-nav" onclick="showPerfilPage()">Perfil</a>
-                    <a class="nav-link disabled a-nav" onclick="calculateRoute()">Consumo</a>
+                    <a class="nav-link active a-nav" onclick="facturaLateral()" id="facturacion">Facturacion</a>
+                    <a class="nav-link a-nav" onclick="perfilLateral()" id="perfil">Perfil</a>
+                    <a class="nav-link disabled a-nav" onclick="consumoLateral()" id="consumo">Consumo</a>
                     <a class="nav-link disabled a-nav" href="#">Métricas</a>
                 </div>
             </nav>
@@ -41,14 +46,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 info-container">
-
+                    <div id="metricas" style="display: none;">
+                        <p>Aquí irá contenido gráfico Metricas</p>
+                    </div>
+                    <div id="volumenes" style="display: none;">
+                        <p>Aquí irá contenido gráfico Volúmenes</p>
+                    </div>
+                    <div id="consumo" style="display: none;">
+                        <p>Aquí irá contenido gráfico Consumo</p>
+                        <p>Aquí irá contenido gráfico Consumo</p>
+                    </div>
+                    <div id="factura" style="display: none;">
+                        <p>Aquí irá contenido gráfico Factura</p>
+                    </div>
                 </div>
             </div>
             <div class="row btn-section">
-                <div class="col-3 select-options"></div>
-                <div class="col-3 select-options"></div>
-                <div class="col-3 select-options"></div>
-                <div class="col-3 select-options"></div>
+                <div class="col-3 select-options" onclick="metricaPrincipalDiv()">Métricas</div>
+                <div class="col-3 select-options" onclick="volumenesPrincipalDiv()">Volúmenes</div>
+                <div class="col-3 select-options" onclick="consumoPrincipalDiv()">Consumo</div>
+                <div class="col-3 select-options" onclick="facturaPrincipalDiv()">Factura</div>
             </div>
         </div>
     </div>
@@ -68,9 +85,10 @@
         firebase.initializeApp(config);
     </script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="src/js/app.js"></script>
+    <script src="src/js/routes.js"></script>
 </body>
 
 </html>
