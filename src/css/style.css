@@ -1,6 +1,8 @@
 /* Contenedor de la información */
 body{
   font-family: 'Dosis', sans-serif;
+  background-image: linear-gradient(-90deg, rgb(0, 170, 255), white);
+
 }
 .info-container {
   height: 300px;
@@ -135,8 +137,9 @@ width: 95%;
 
 #bienvenido{
   margin-top: 1.5em;
+  color: white;
 }
 #interes{
   margin-top: 2em;
-  color: rgb(0, 170, 255)
+  color: white;
 }
